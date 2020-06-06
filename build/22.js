@@ -1,6 +1,6 @@
 webpackJsonp([22],{
 
-/***/ 2086:
+/***/ 2085:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__synchronization__ = __webpack_require__(2240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__synchronization__ = __webpack_require__(2239);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_components_module__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__directives_directives_module__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pipes_pipes_module__ = __webpack_require__(64);
@@ -63,7 +63,7 @@ var CoreSettingsSynchronizationPageModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 2240:
+/***/ 2239:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -195,7 +195,7 @@ var CoreSettingsSynchronizationPage = /** @class */ (function () {
     };
     CoreSettingsSynchronizationPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-core-settings-synchronization',template:/*ion-inline-start:"D:\src\gupolenseignement\src\core\settings\pages\synchronization\synchronization.html"*/'<ion-header>\n    <ion-navbar core-back-button>\n        <ion-title>{{ \'core.settings.synchronization\' | translate }}</ion-title>\n        <ion-buttons end>\n        </ion-buttons>\n    </ion-navbar>\n</ion-header>\n<core-navbar-buttons>\n    <button ion-button icon-only (click)="showInfo()" [attr.aria-label]="\'core.info\' | translate">\n        <ion-icon name="information-circle"></ion-icon>\n    </button>\n</core-navbar-buttons>\n<ion-content>\n    <core-loading [hideUntil]="sitesLoaded">\n        <ion-item-divider>\n            <h2>{{ \'core.settings.syncsettings\' | translate }}</h2>\n        </ion-item-divider>\n        <ion-item text-wrap>\n            <ion-label>{{ \'core.settings.enablesyncwifi\' | translate }}</ion-label>\n            <ion-toggle item-end [(ngModel)]="syncOnlyOnWifi" (ngModelChange)="syncOnlyOnWifiChanged()">\n            </ion-toggle>\n        </ion-item>\n        <ion-item-divider>\n            <h2>{{ \'core.settings.sites\' | translate }}</h2>\n        </ion-item-divider>\n        <ion-item *ngFor="let site of sites" [class.core-primary-selected-item]="site.id == currentSiteId" text-wrap>\n            <h2><core-format-text [text]="site.siteName" clean="true" [siteId]="site.id"></core-format-text></h2>\n            <p>{{ site.fullName }}</p>\n            <p>{{ site.siteUrl }}</p>\n            <button ion-button icon-only clear item-end *ngIf="!isSynchronizing(site.id)" (click)="synchronize(site.id)" [title]="site.siteName" [attr.aria-label]="\'core.settings.synchronizenow\' | translate">\n                <ion-icon name="sync"></ion-icon>\n            </button>\n            <ion-spinner item-end *ngIf="isSynchronizing(site.id)"></ion-spinner>\n        </ion-item>\n    </core-loading>\n</ion-content>\n'/*ion-inline-end:"D:\src\gupolenseignement\src\core\settings\pages\synchronization\synchronization.html"*/,
+            selector: 'page-core-settings-synchronization',template:/*ion-inline-start:"D:\src\gupolenseignement\src\core\settings\pages\synchronization\synchronization.html"*/'<ion-header>\n\n    <ion-navbar core-back-button>\n\n        <ion-title>{{ \'core.settings.synchronization\' | translate }}</ion-title>\n\n        <ion-buttons end>\n\n        </ion-buttons>\n\n    </ion-navbar>\n\n</ion-header>\n\n<core-navbar-buttons>\n\n    <button ion-button icon-only (click)="showInfo()" [attr.aria-label]="\'core.info\' | translate">\n\n        <ion-icon name="information-circle"></ion-icon>\n\n    </button>\n\n</core-navbar-buttons>\n\n<ion-content>\n\n    <core-loading [hideUntil]="sitesLoaded">\n\n        <ion-item-divider>\n\n            <h2>{{ \'core.settings.syncsettings\' | translate }}</h2>\n\n        </ion-item-divider>\n\n        <ion-item text-wrap>\n\n            <ion-label>{{ \'core.settings.enablesyncwifi\' | translate }}</ion-label>\n\n            <ion-toggle item-end [(ngModel)]="syncOnlyOnWifi" (ngModelChange)="syncOnlyOnWifiChanged()">\n\n            </ion-toggle>\n\n        </ion-item>\n\n        <ion-item-divider>\n\n            <h2>{{ \'core.settings.sites\' | translate }}</h2>\n\n        </ion-item-divider>\n\n        <ion-item *ngFor="let site of sites" [class.core-primary-selected-item]="site.id == currentSiteId" text-wrap>\n\n            <h2><core-format-text [text]="site.siteName" clean="true" [siteId]="site.id"></core-format-text></h2>\n\n            <p>{{ site.fullName }}</p>\n\n            <p>{{ site.siteUrl }}</p>\n\n            <button ion-button icon-only clear item-end *ngIf="!isSynchronizing(site.id)" (click)="synchronize(site.id)" [title]="site.siteName" [attr.aria-label]="\'core.settings.synchronizenow\' | translate">\n\n                <ion-icon name="sync"></ion-icon>\n\n            </button>\n\n            <ion-spinner item-end *ngIf="isSynchronizing(site.id)"></ion-spinner>\n\n        </ion-item>\n\n    </core-loading>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\src\gupolenseignement\src\core\settings\pages\synchronization\synchronization.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__providers_config__["a" /* CoreConfigProvider */],
             __WEBPACK_IMPORTED_MODULE_3__providers_events__["a" /* CoreEventsProvider */],
